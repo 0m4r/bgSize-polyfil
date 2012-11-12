@@ -1,4 +1,4 @@
 bgSize-polyfil
 ==============
 
-a jQuery polyfil fr the CSS background-size property
+a jQuery polyfil for the CSS 'background-size' property
