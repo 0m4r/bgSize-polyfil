@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>bgSize jQuery plugin demo - by @0m4r </title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
+        <script src="../bgSize-polyfil.js" type="text/javascript"></script>
+        <stlye type="text/css">
+            span{
+                width: 300px;
+                height: 300px;
+            }
+            
+            .css-contain{
+                background-image: url('bg-image.jpg');
+                background-size: contain;
+            }
+        </style>
+    </head>
+    <body>
+    
+        <h1>background-size: 'contain'<h1>
+        <div class="js-containin">
+            the background is applied via javascript
+        </div>
+        <div class="css-containin">
+            the background is applied via css
+        </div>
+
+    </body>
+    <script type="text/javascript">
+        $('js-contain').bgSizeContain({
+            background-image: url('bg-image.jpg');
+        });
+    </script>
+</html>
