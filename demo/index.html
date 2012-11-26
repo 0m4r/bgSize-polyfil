@@ -4,32 +4,83 @@
         <title>bgSize jQuery plugin demo - by @0m4r </title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js" type="text/javascript"></script>
         <script src="../bgSize-polyfil.js" type="text/javascript"></script>
-        <stlye type="text/css">
-            span{
+        <style type="text/css">
+        
+            
+        	*, *:before, body:after {
+			    -webkit-box-sizing: border-box;
+			    -moz-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+			
+            
+            div{
                 width: 300px;
-                height: 300px;
+                height: 100px;
+                display: inline-block;
+				background-repeat: no-repeat;
+				border: medium none;
+				overflow: auto;
+				border: 1px solid green;
             }
             
-            .css-contain{
-                background-image: url('bg-image.jpg');
+            div > div {
+            	border: none;
+            }
+            
+            .css {
+            	background-image: url('bgImage.jpg');
+            	border: 1px solid red;
+            }
+            
+            .contain{
+				background-image: url('bgImage.png');
                 background-size: contain;
+            }
+            
+            .cover{
+                background-size: cover;
             }
         </style>
     </head>
     <body>
-    
-        <h1>background-size: 'contain'<h1>
-        <div class="js-containin">
-            the background is applied via javascript
+
+     	<h1>background-size: 'cover'</h1>
+        <div class="js-cover">
+            <h2>the background is applied via js</h2>
+            Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
         </div>
-        <div class="css-containin">
-            the background is applied via css
+        <div class="css cover">
+            <h2>the background is applied via css</h2>
+           Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
+        </div>
+  			
+  		
+        <h1>background-size: 'contain'</h1>
+        <div class="js-contain">
+            <h2>the background is applied via js</h2>
+            Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
+        </div>
+        <div class="css contain">
+            <h2>the background is applied via css</h2>
+           Zombie ipsum reversus ab viral inferno, nam rick grimes malum cerebro. De carne lumbering animata corpora quaeritis. Summus brains sit​​, morbo vel maleficia? De apocalypsi gorger omero undead survivor dictum mauris. Hi mindless mortuis soulless creaturas, imo evil stalking monstra adventus resi dentevil vultus comedat cerebella viventium. Qui animated corpse, cricket bat max brucks terribilem incessu zomby. The voodoo sacerdos flesh eater, suscitat mortuos comedere carnem virus. Zonbi tattered for solum oculi eorum defunctis go lum cerebro. Nescio brains an Undead zombies. Sicut malus putrid voodoo horror. Nigh tofth eliv ingdead.
         </div>
 
     </body>
     <script type="text/javascript">
-        $('js-contain').bgSizeContain({
-            background-image: url('bg-image.jpg');
+    $(function(){
+    	
+        $('.js-contain').bgSize({
+            backgroundImage: 'bgImage.png',
+            force: true,
+        	backgroundSize: 'contain'
         });
+		
+         $('.js-cover').bgSize('cover', {
+            backgroundImage: 'bgImage.jpg',
+            force: true,
+            backgroundSize: 'cover'
+        });
+    })    
     </script>
 </html>
