@@ -144,7 +144,11 @@ strong {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+/*
+>>>>>>> updated the examples
 img {
   position: relative;
   margin: 0 auto;
@@ -159,7 +163,11 @@ img {
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
+<<<<<<< HEAD
 
+>>>>>>> updated the examples
+=======
+*/
 >>>>>>> updated the examples
 pre, code {
   width: 100%;
@@ -260,10 +268,12 @@ form {
   padding: 20px;
 }
 
+/*
 img {
   width: 100%;
   max-width: 100%;
 }
+*/
 
 <<<<<<< HEAD
 
