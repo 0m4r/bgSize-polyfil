@@ -1,1 +1,1 @@
-console.log('This would be the main JS file.');
+bgSize-polyfil.js
