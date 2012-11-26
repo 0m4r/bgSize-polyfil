@@ -143,6 +143,7 @@ strong {
   font-weight: bold;
 }
 
+/*
 img {
   position: relative;
   margin: 0 auto;
@@ -157,7 +158,7 @@ img {
   -o-box-shadow: 0 0 5px #ebebeb;
   -ms-box-shadow: 0 0 5px #ebebeb;
 }
-
+*/
 pre, code {
   width: 100%;
   color: #222;
@@ -257,10 +258,12 @@ form {
   padding: 20px;
 }
 
+/*
 img {
   width: 100%;
   max-width: 100%;
 }
+*/
 
 /*******************************************************************************
 Full-Width Styles
