@@ -1,1 +1,0 @@
-bgSize-polyfil.js
