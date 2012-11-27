@@ -45,7 +45,6 @@
 
             if (options.backgroundSize) {
                 var bSize = options.backgroundSize;
-                console.log('bSize', bSize);
                 switch (bSize) {
                 case 'auto':
                     break;
@@ -57,7 +56,6 @@
                      * cover the background positioning area.
                      */
                     (function() {
-                        console.log('** cover **');
                         methods.applyCover.call(this, options);
                     })();
                     break;
@@ -69,7 +67,6 @@
                      * the background positioning area.
                      */
                     (function() {
-                        console.log('** contain **');
                         methods.applyContain.call(this, options);
                     })();
 
@@ -77,7 +74,6 @@
                 default:
                     (function() {
                         var tmp = bSize.split(' ');
-                        console.log(tmp);
                         if (tmp.length == 1) {
                             w = tmp[0];
                         }
