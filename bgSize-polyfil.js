@@ -10,8 +10,27 @@
     "use strict"; // jshint ;_;
 
     var methods = {
+<<<<<<< HEAD
         
         init: function(opt) {
+=======
+        getImgActualSizes: function(params){
+            if(params){
+                var options = params;
+                // this is to determina the actual size to apply as a background-image.
+                var newImg = new Image();
+                options.img = newImg;
+                options.$that = $(this);
+                newImg.onload = function() {
+                    methods.doit.call(this, options);
+                };
+                newImg.src = options.backgroundImage;
+            }
+        },
+        
+        init: function(opt) {
+
+>>>>>>> updates to the demo page
             if (opt) {
                 if (!opt.force && "backgroundSize" in document.body.style) {
                     return;
@@ -150,22 +169,22 @@
             var $bg_container = createBgContainer(options);
 
             switch (bgRepeat) {
-            case 'repeat-y':
-                $that.wrap($bg_container);
-                repeatY($img, container_h / h, $that);
-                break;
-            case 'repeat-x':
-                $that.wrap($bg_container);
-                repeatX($img, container_w / w, $that);
-                break;
-            case 'no-repeat':
-                $that.wrap($bg_container);
-                $img.insertBefore($that);
-                break;
-            default:
-                $that.wrap($bg_container);
-                repeatX($img, container_w / w, $that);
-                repeatY($img, container_h / h, $that);
+                case 'repeat-y':
+                    $that.wrap($bg_container);
+                    repeatY($img, container_h / h, $that);
+                    break;
+                case 'repeat-x':
+                    $that.wrap($bg_container);
+                    repeatX($img, container_w / w, $that);
+                    break;
+                case 'no-repeat':
+                    $that.wrap($bg_container);
+                    $img.insertBefore($that);
+                    break;
+                default:
+                    $that.wrap($bg_container);
+                    repeatX($img, container_w / w, $that);
+                    repeatY($img, container_h / h, $that);
             }
         }
     };
@@ -175,11 +194,9 @@
         if (arguments.length > 0) {
             if (methods[method]) {
                 return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-            }
-            else if (typeof method === 'object' || !method) {
+            } else if (typeof method === 'object' || !method) {
                 return methods.init.apply(this, arguments);
-            }
-            else {
+            } else {
                 $.error('Method ' + method + ' does not exist on jQuery.bgSize');
             }
         }
