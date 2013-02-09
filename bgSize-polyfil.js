@@ -52,7 +52,6 @@
 
             if (options.backgroundSize) {
                 var bSize = options.backgroundSize;
-                console.log('bSize', bSize);
                 switch (bSize) {
                 case 'auto':
                     break;
@@ -64,7 +63,6 @@
                      * cover the background positioning area.
                      */
                     (function() {
-                        console.log('** cover **');
                         methods.applyCover.call(this, options);
                     })();
                     break;
