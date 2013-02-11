@@ -184,25 +184,6 @@
         }
     };
 
-    $.fn.bgSize = function(method) {
-        // Method calling logic
-        if (arguments.length > 0) {;
-            if (methods[method]) {
-                return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
-            }
-            else if (typeof method === 'object' || !method) {
-                return methods.init.apply(this, arguments);
-            }
-            else {
-                $.error('Method ' + method + ' does not exist on jQuery.bgSize');
-            }
-        }
-        else {
-            $.error('Invalid arguments number: ', arguments);
-        }
-
-    };
-
     var restyleContainer = function($el, options) {
         return $el.css({
             'position': 'relative',
@@ -270,6 +251,24 @@
             $img_clone.css({
                 'left': (top * j) + 'px'
             }).insertBefore($prnt);
+        }
+    };
+    
+    $.fn.bgSize = function(method) {
+        // Method calling logic
+        if (arguments.length > 0) {;
+            if (methods[method]) {
+                return methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
+            }
+            else if (typeof method === 'object' || !method) {
+                return methods.init.apply(this, arguments);
+            }
+            else {
+                $.error('Method ' + method + ' does not exist on jQuery.bgSize');
+            }
+        }
+        else {
+            $.error('Invalid arguments number: ', arguments);
         }
     };
 
