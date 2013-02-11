@@ -72,11 +72,11 @@
             }
             
             #content .contain{
-				background-image: url('bgImage.png');
+				background-image: url('../bgImage.png');
                 background-size: contain;
             }
             
             #content .cover{
-                background-image: url('bgImage.jpg');
+                background-image: url('../bgImage.jpg');
                 background-size: cover;
             }
