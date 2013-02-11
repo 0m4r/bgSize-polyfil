@@ -10,33 +10,7 @@
     "use strict"; // jshint ;_;
 
     var methods = {
-<<<<<<< HEAD
-<<<<<<< HEAD
-        
         init: function(opt) {
-=======
-=======
->>>>>>> 2c51b10cacc763fa290dee782f377d0816e3dfde
-        getImgActualSizes: function(params){
-            if(params){
-                var options = params;
-                // this is to determina the actual size to apply as a background-image.
-                var newImg = new Image();
-                options.img = newImg;
-                options.$that = $(this);
-                newImg.onload = function() {
-                    methods.doit.call(this, options);
-                };
-                newImg.src = options.backgroundImage;
-            }
-        },
-        
-        init: function(opt) {
-
-<<<<<<< HEAD
->>>>>>> updates to the demo page
-=======
->>>>>>> 2c51b10cacc763fa290dee782f377d0816e3dfde
             if (opt) {
                 if (!opt.force && "backgroundSize" in document.body.style) {
                     return;
@@ -85,10 +59,6 @@
                      * the background positioning area.
                      */
                     (function() {
-<<<<<<< HEAD
-=======
-                        console.log('** contain **');
->>>>>>> 2c51b10cacc763fa290dee782f377d0816e3dfde
                         methods.applyContain.call(this, options);
                     })();
 
