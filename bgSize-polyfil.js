@@ -11,9 +11,12 @@
 
     var methods = {
 <<<<<<< HEAD
+<<<<<<< HEAD
         
         init: function(opt) {
 =======
+=======
+>>>>>>> 2c51b10cacc763fa290dee782f377d0816e3dfde
         getImgActualSizes: function(params){
             if(params){
                 var options = params;
@@ -30,7 +33,10 @@
         
         init: function(opt) {
 
+<<<<<<< HEAD
 >>>>>>> updates to the demo page
+=======
+>>>>>>> 2c51b10cacc763fa290dee782f377d0816e3dfde
             if (opt) {
                 if (!opt.force && "backgroundSize" in document.body.style) {
                     return;
@@ -79,6 +85,10 @@
                      * the background positioning area.
                      */
                     (function() {
+<<<<<<< HEAD
+=======
+                        console.log('** contain **');
+>>>>>>> 2c51b10cacc763fa290dee782f377d0816e3dfde
                         methods.applyContain.call(this, options);
                     })();
 
