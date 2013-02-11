@@ -3,12 +3,6 @@
 			    -moz-box-sizing: border-box;
 				box-sizing: border-box;
 			}
-			
-			#content {
-				text-align: center;
-				color: #333;
-                margin: 100px auto;
-			}
             
             body {
                 font-family:arial;
@@ -45,6 +39,12 @@
                 padding: 1em;
             }
             
+            #content {
+    			text-align: center;
+				color: white;
+                margin: 100px auto;
+			}
+            
             #content h1 {
                 border-top: 1px solid black;
                 border-bottom: 1px solid black;
@@ -56,7 +56,7 @@
                 display: inline-block;
 				background-repeat: no-repeat;
 				overflow: auto;
-                text-align: left;
+                text-align: justify;
             }
             
             #content div > div {
@@ -65,18 +65,17 @@
             
             #content .css {
             	border: 1px solid red;
+                background-image: url('bgImage.png');
             }
             
             #content .js {
             	border: 1px solid green;
             }
             
-            #content .contain{
-				background-image: url('bgImage.png');
+            #content .contain.css{
                 background-size: contain;
             }
             
-            #content .cover{
-                background-image: url('bgImage.jpg');
+            #content .cover.css{                
                 background-size: cover;
             }
