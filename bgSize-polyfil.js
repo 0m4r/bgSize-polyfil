@@ -4,6 +4,7 @@
  * source at: https://github.com/0m4r/bgSize-polyfil
  *
  * inspired by: https://gist.github.com/3081898
+ *
  * */
 !function($) {
 
@@ -211,7 +212,7 @@
             'z-index': '-10',
             'padding': '0',
             'margin': '0',
-            'outline': '0'                       
+            'outline': '0'
         });
     };
 
@@ -253,7 +254,7 @@
             }).insertBefore($prnt);
         }
     };
-    
+
     $.fn.bgSize = function(method) {
         // Method calling logic
         if (arguments.length > 0) {;
